@@ -1,0 +1,1 @@
+A script that automatically filters through when2meet members by group and plots their availability onto a heatmap, allowing for member-specific availability using a webscrabed when2meet dataset.
