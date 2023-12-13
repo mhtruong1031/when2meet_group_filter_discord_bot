@@ -1,5 +1,6 @@
 import discord, random
 
+from bot_token import bot_token
 from When2Meet import When2Meet
 
 # W2M Set-up
@@ -56,4 +57,4 @@ async def on_message(message):
     if message.content.startswith("roll for"):
         await message.channel.send(str(random.randint(1,20)))
 
-client.run('MTE3Nzg5MDM0OTA1ODg4MzYwNA.G7hLGd.BF_2KaeFANm9719DaJnqUU5c7KADKiHM-qZ68c')
+client.run(bot_token)
