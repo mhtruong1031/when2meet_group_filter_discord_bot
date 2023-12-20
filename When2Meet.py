@@ -48,10 +48,7 @@ class When2Meet:
 
         return t_df
     
-    # Saves plotted table as a .png in the specified path
-    # filtered_table_df {pd.Dataframe} - table formatted dataframe
-    # path {str} - path to save image to
-    def save_tablemap(self, filtered_table_df: pd.DataFrame, path: str):
+    def save_tablemap(self, filtered_table_df: pd.DataFrame, path: str) -> None:
         vals = filtered_table_df.values
 
         normal = plt.Normalize(vals.min()-1, vals.max()+1)

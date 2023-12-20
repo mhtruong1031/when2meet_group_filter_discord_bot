@@ -43,6 +43,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    # Sends graph with availability to channel
     if message.content.startswith('availability for '):
         for index, group_name in enumerate(groups):
             if message.content[17:] == group_name.lower():
@@ -53,8 +54,5 @@ async def on_message(message):
                 embed.set_image(url="attachment://image.png")
                 await message.channel.send(file=file, embed=embed)
                 break
-    
-    if message.content.startswith("roll for"):
-        await message.channel.send(str(random.randint(1,20)))
 
 client.run(bot_token)
